@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="bank.domain.Client" table="clients">
+        <id name="id" type="int" column="id_client">
+            <generator class="native"/>
+        </id>
+
+        <property name="firstName" type="string" column="first_name"/>
+        <property name="middleName" type="string" column="middle_name"/>
+        <property name="lastName" type="string" column="last_name"/>
+        <property name="passport" type="int" column="passport"/>
+        <property name="date" type="timestamp" column="date"/>
+
+
+    </class>
+</hibernate-mapping>

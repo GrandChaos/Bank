@@ -14,6 +14,13 @@ public class BankAccount {
     public BankAccount() {
     }
 
+    public BankAccount(int number, Date date, int balance, Client client) {
+        this.number = number;
+        this.date = date;
+        this.balance = balance;
+        this.client = client;
+    }
+
 
     public int getNumber() {
         return number;

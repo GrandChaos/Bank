@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="bank.domain.BankAccount" table="bank_accounts">
+        <id name="number" type="int" column="number">
+            <generator class="native"/>
+        </id>
+        
+        <property name="date" type="timestamp" column="date"/>
+        <property name="balance" type="int" column="balance"/>
+
+        <many-to-one name="client" column="client_id" class="bank.domain.Client" cascade="save-update" />
+
+    </class>
+</hibernate-mapping>

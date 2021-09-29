@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="bank.domain.Transaction" table="transactions">
+        <id name="id" type="int" column="id_transaction">
+            <generator class="native"/>
+        </id>
+
+        <property name="amount" type="int" column="amount"/>
+        <property name="date" type="timestamp" column="date"/>
+
+        <many-to-one name="debitingAccount" column="debiting_account" class="bank.domain.BankAccount" cascade="save-update" />
+        <many-to-one name="creditingAccount" column="crediting_account" class="bank.domain.BankAccount" cascade="save-update" />
+
+
+    </class>
+</hibernate-mapping>

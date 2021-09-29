@@ -15,6 +15,15 @@ public class Client {
     public Client() {
     }
 
+    public Client(int id, String firstName, String middleName, String lastName, int passport, Date date) {
+        this.id = id;
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
+        this.passport = passport;
+        this.date = date;
+    }
+
 
     public int getId() {
         return id;

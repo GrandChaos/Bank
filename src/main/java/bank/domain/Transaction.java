@@ -15,6 +15,14 @@ public class Transaction {
     public Transaction() {
     }
 
+    public Transaction(int id, int amount, Date date, BankAccount debitingAccount, BankAccount creditingAccount) {
+        this.id = id;
+        this.amount = amount;
+        this.date = date;
+        this.debitingAccount = debitingAccount;
+        this.creditingAccount = creditingAccount;
+    }
+
 
     public int getId() {
         return id;
